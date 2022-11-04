@@ -1,5 +1,5 @@
 # publising_amorepacific
-샐러디 웹 리디자인 (메인 페이지)
+아모레퍼시픽 웹 리디자인 (메인 페이지 + 서브 페이지)
 
 웹사이트 https://aewols.github.io/publising_amorepacific/
 <br>비핸스 https://www.behance.net/gallery/156240843/2021-Web-Design-Amorepacific-
