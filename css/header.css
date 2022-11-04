@@ -1,0 +1,392 @@
+/*---------- header style ----------*/
+
+/* popup */
+
+#popup{ /*뒤에 나오는 검정배경*/
+	width: 100%; 
+	height:	100%; 
+	position: fixed; 
+	left: 0; 
+	top: 0; 
+	background: rgba(0,0,0, 0.8); 
+	z-index: 20000; 
+	/* display: none;  */
+}
+
+#popup .body{  /*띄워지는 팝업창 위치설정*/
+	position: fixed; 
+	left: 50%; 
+	top: 50%; 
+	background: #fff;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+/* .pop_content ul li{float: left;} */
+
+.body .btn_close{
+	text-align: right;
+	background: #000;
+	position: relative;
+}
+.body .btn_close input{
+	position: absolute;
+	top: 5px;
+	right: 135px;
+}
+.body .btn_close .tt{
+	color: #fff;
+	font-size: 12px;
+	position: absolute;
+	top: 6px;
+	right: 30px;
+}
+.body .btn_close i{ /*아이콘폰트*/
+	padding-right: 5px;
+	color: #fff;
+	cursor: pointer;
+}
+
+
+#txt1{
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	z-index: 10000;
+}  스크롤바 위치확인
+
+
+/*///////////// TOP버튼*/
+
+.top_btn{
+	position: fixed;
+    z-index: 9999;
+    bottom: 20px;
+    right: 20px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;   
+    background: #000;
+    text-align: center;
+}
+.top_btn>a>i{
+    line-height: 35px;
+    color: #fff;
+    font-size: 28px;
+}
+.top_btn:hover{background: #ccc;}
+.top_btn:hover>a>i{color: #262626;}
+
+
+
+
+/* header___________________________________________*/
+
+header{height: 260px;}
+
+.logo{
+	width: 250px;
+	height: 25px;
+	margin: 0 auto;
+	padding-top: 120px;
+}
+
+.header-content{
+	position: relative;
+	margin-top: 65px;
+}
+
+
+/*///// 언어선택 폼 /////*/
+
+.lang{
+	float: left;
+	position: relative;
+	width: 36px;
+	height: 36px;
+	border-radius: 50px;
+	border: 1px solid #000;
+	padding: 7px;
+	box-sizing: border-box;
+	transition: all 0.4s;
+	overflow: hidden;
+	margin-left: 15px;
+}
+.lang1{
+	position: absolute;
+	left: 7px;
+	width: 25px;
+	height: 25px;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: all 0.4s;
+}
+.lang2{
+	position: absolute;
+	left: 38px;
+	float: left;
+	width: 140px;
+	height: 25px;
+}
+.lang2 span{
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 0;
+	height: 0;
+	border-top: 6px solid transparent;
+	border-left: 9px solid #000;
+	border-bottom: 6px solid transparent;
+	transition: all 0.4s;
+}
+.lang2 ul{
+	position: absolute;
+	left: 18px;
+	top: 1px;
+	transition: all 0.4s;
+}
+.lang2 ul li{
+	float: left;
+	width: 30px;
+	font-size: 14px;
+	text-align: center;
+}
+.lang2 li a{
+	color: #666;
+	font-weight: bold;
+}
+.lang2 li a:hover{border-bottom: 1px solid #666;}
+.lang2 ul li .lactive{
+	color: #005295;
+	border-bottom: 2px solid #005295;
+}
+
+
+/*///// 주메뉴 /////*/
+
+nav{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1000;
+}
+.gnbMenu>li{
+	float: left;
+	width: 150px;
+	height: 25px;
+	position: relative;
+	border-right: 1px solid #000;
+	box-sizing: border-box;
+	margin-top: 5px;
+	padding-top: 2px;
+	text-align: center;
+}
+.gnbMenu>li:last-child{border-right: none}
+.gnbMenu>li>a{
+	display: block;
+	color: #000;
+	font-size: 16px;
+	font-weight: bold;
+}
+.gnbMenu>li:hover>a{color: #062c5e;}
+.gnbMenu>li span{  
+    display: block;
+    width: 0;
+    border-bottom: 3px solid #062c5e;
+    position: absolute;
+    top: 42px;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: all 0.4s;
+}
+.gnbMenu>li:hover span{
+    width: 120px;
+    opacity: 1;
+}
+
+
+/*///// 서브메뉴 /////*/
+
+.gnbMenu>li .smenu{
+	display: none;
+	position: absolute;
+	top: 46px;
+	padding-top: 10px;
+	border-left: 1px solid #e8e8e8;
+	width: 150px;
+	height: 170px;
+}
+.gnbMenu>li .last{border-right: 1px solid #e8e8e8;}
+
+.gnbMenu>li ul li{
+	padding: 10px 0px;
+	transition: all 0.4s;
+}
+.gnbMenu>li>ul li a{
+	color: #666;
+	font-size: 13px;
+}
+.gnbMenu>li>ul li:hover{background: #dbe4ea;}
+.gnbMenu>li>ul li:hover a{color: #000;}
+
+.bg_box{
+	display: none;
+	position: absolute;
+	top: 51px;
+	width: 100%;
+	height: 180px;
+	background: #fff;
+	/* opacity: 0.9; */
+	z-index: 900;
+}
+
+
+/*///// 검색 /////*/
+
+.search_bar{
+	position: relative;
+	float: right;
+	width: 36px;
+	height: 36px;
+	border-radius: 50px;
+	border: 1px solid #000;
+	padding: 5px;
+	box-sizing: border-box;
+	transition: all 0.4s;
+	overflow: hidden;
+	margin-right: 15px;
+}
+.search_bar input{
+	position: absolute;
+	right: 38px;
+	width: 140px;
+	height: 25px;
+	font-size: 15px;
+	border: none;
+	border-bottom: 1px solid #000;
+	text-indent: 5px;
+	box-sizing: border-box;
+	transition: all 0.4s;
+	background: transparent;
+}
+input:focus{outline: none;}
+
+.search_bar button{
+	position: absolute;
+	right: 5px;
+	background: transparent;
+	width: 25px;
+	height: 25px;
+	border: none;
+	transition: all 0.4s;
+}
+.search_bar button span{
+	font-size: 25px;
+	color: #000;
+	cursor: pointer;
+	transition: all 0.4s;
+}
+.search_bar button:hover span{color: #005295;}
+
+
+/* 스크롤바 내릴때 내려오는 고정탑메뉴 */
+
+.gnb_fix{
+	position: fixed;
+	top: 0;
+	left: 50%;
+	width: 1200px;
+	height: 60px;
+	z-index: 10000;
+	background: url(../image/bg.png) no-repeat;
+	transform: translateX(-50%);
+	border: solid #000;
+	border-width: 0 1px 1px 1px;
+	margin-top: -140px;
+}
+.logo_fix{
+	padding-top: 18px;
+	padding-left: 18px;
+	float: left;
+}
+
+.gnbMenu_fix{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 10000;
+	padding-top: 12px;
+}
+.gnbMenu_fix>li{
+	float: left;
+	width: 150px;
+	height: 25px;
+	position: relative;
+
+	border-right: 1px solid #000;
+	box-sizing: border-box;
+	margin-top: 5px;
+	padding-top: 2px;
+	text-align: center;
+}
+.gnbMenu_fix>li:last-child{border-right: none}
+.gnbMenu_fix>li>a{
+	display: block;
+	color: #000;
+	font-size: 16px;
+	font-weight: bold;
+}
+.gnbMenu_fix>li:hover>a{color: #062c5e;}
+.gnbMenu_fix>li span{  
+    display: block;
+    width: 0;
+    border-bottom: 3px solid #062c5e;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: all 0.4s;
+}
+.gnbMenu_fix>li:hover span{
+    width: 120px;
+    opacity: 1;
+}
+
+
+/*///// 서브메뉴 /////*/
+
+.gnbMenu_fix>li .smenu_fix{
+	display: none;
+	position: absolute;
+	top: 44px;
+	z-index: 10000;
+	padding-top: 10px;
+	border-left: 1px solid #e8e8e8;
+	width: 150px;
+	height: 170px;
+}
+.gnbMenu_fix>li .last{border-right: 1px solid #e8e8e8;}
+
+.gnbMenu_fix>li ul li{
+	padding: 10px 0px;
+	transition: all 0.4s;
+}
+.gnbMenu_fix>li>ul li a{
+	color: #666;
+	font-size: 13px;
+}
+.gnbMenu_fix>li>ul li:hover{background: #dbe4ea;}
+.gnbMenu_fix>li>ul li:hover a{color: #000;}
+
+.bg_box_fix{
+	display: none;
+	position: absolute;
+	top: 61px;
+	width: 100%;
+	height: 180px;
+	background: #fff;
+	/* opacity: 0.9; */
+}
+.gnb_fix>.search_bar{margin: 12px 15px 0 0;}
